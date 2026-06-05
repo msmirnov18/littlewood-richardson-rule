@@ -10,13 +10,13 @@ Precomputed Schubert bases are included for D6/P6, E6/P1, E6/P2, E7/P1, E7/P7, a
 ## Usage
 
 ```python
-# Cohomology of the Grassmannian Gr(2, 5)  (type A4, parabolic node 2)
-X = CohomologyPartialFlagVariety("A4", (2,))
-
-s1, s2 = X.schubert_basis[1], X.schubert_basis[2]
-X.cup_product(X.module(s1), X.module(s2))
+sage: load("littlewood-richardson.sage")
+sage: H = CohomologyPartialFlagVariety("A4", (2,))
+sage: s1, s2 = H.schubert_basis[1], H.schubert_basis[2]
+sage: H.cup_product(H.module(s1), H.module(s2))
+B[s3*s1*s2] + B[s4*s3*s2]
 ```
 
 ## Requirements
 
-[SageMath](https://www.sagemath.org/) 9.0 or later.
+[SageMath](https://www.sagemath.org/)
